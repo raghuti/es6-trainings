@@ -23,6 +23,29 @@
         width: 600px;
         margin: 10px auto;
     }
+    .hero{
+        height: 350px;
+        width: 200px;
+        background-color: grey;
+        padding: 5px;
+        font-family: Arial, Helvetica, sans-serif;
+        float: left;
+        margin: 5px;
+    }
+    .hero h1,h2{
+        margin: 0px
+    }
+    .hero img{
+        width: 100%;
+    }
+    .hero input{
+        display: block;
+        width: 98%
+    }
+    .hero h1{
+        background-color: bisque;
+        color: darkorange;
+    }
     </style>
     <script>
         var xhr = new XMLHttpRequest();
@@ -75,5 +98,15 @@
     <hr>
     <div class="box"></div>
     <button>Get Data</button>
+
+    <div class="hero">
+        <h1>Batman</h1>
+        <h2>Bruce Wayne</h2>
+        <img src="images/batman.jpg" alt="batman">
+        <hr>
+        <input value="7" type="range" min="0" max="10">
+        <h2>Gotham</h2>
+    </div>
+
 </body>
 </html>
