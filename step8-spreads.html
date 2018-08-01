@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Fat Arrow Function</title>
+    <script>
+        function saymessage(hname, hcity, hmessage){
+            return "Mr."+hname+" from "+hcity+" says "+hmessage+" !!!"
+        };
+        var data = ["Batman","Gotham","good afternoon everyone"];
+        // console.log( saymessage(data[0], data[1], data[2]));
+        console.log( saymessage(...data) );
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

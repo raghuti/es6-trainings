@@ -1,0 +1,31 @@
+<heroes>
+    <hero>
+        <title>Batman</title>
+        <fname>Bruce</fname>
+        <lname>Wayne</lname>
+        <city>Gotham</city>
+        <power>7</power>
+    </hero>
+    <hero>
+        <title>Superman</title>
+        <fname>Clark</fname>
+        <lname>Kent</lname>
+        <city>Metropolis</city>
+        <power>9</power>
+    </hero>
+    <hero>
+        <title>Ironman</title>
+        <fname>Tony</fname>
+        <lname>Stark</lname>
+        <city>New York</city>
+        <power>7</power>
+    </hero>
+    <hero>
+        <title>Spiderman</title>
+        <fname>Peter</fname>
+        <lname>Parker</lname>
+        <city>New York</city>
+        <power>6</power>
+    </hero>
+</heroes>
+

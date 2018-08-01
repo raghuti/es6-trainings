@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        /*
+        function adder(num1, num2, num3){
+            return num1+num2+num3
+        };
+        console.log(adder(2,3));// NaN
+        console.log(adder(2,3,4));// 9 
+        console.log(adder(2,3,4,5));// 9
+        */
+       
+
+/*      ES5
+        function adder(num1, num2, num3){
+            var rnum1 = num1 || 0;
+            var rnum2 = num2 || 0;
+            var rnum3 = num3 || 0;
+            return rnum1+rnum2+rnum3
+        };
+*/
+/*      ES6
+*/
+        function adder(num1 = 0, num2 = 0, num3 = 0){
+            return num1+num2+num3
+        };
+        console.log(adder(2,3));// 5
+        console.log(adder(2,3,4));// 9 
+        console.log(adder(2,3,4,5));// 9
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

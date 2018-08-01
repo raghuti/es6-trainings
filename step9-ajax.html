@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    .box{
+        width: 600px;
+        height: 200px;
+        background-color: beige;
+        border: 1px solid grey;
+        margin: 50px auto 0px;
+        overflow: auto;
+        font-family: Arial, Helvetica, sans-serif;
+        padding: 5px;
+        box-sizing: border-box;
+        text-align: justify;
+    }
+    button{
+        display: block;
+        width: 600px;
+        margin: 10px auto;
+    }
+    </style>
+    <script>
+        var xhr = new XMLHttpRequest();
+            xhr.open("get","http://localhost:1234/data",true);
+        /*
+        xhr.onreadystatechange = function(){
+            console.log(xhr.readyState);
+            if(xhr.readyState === 4){
+                document
+                .querySelector(".box")
+                .innerHTML = xhr.responseText;
+            }
+        };
+        */
+        xhr.addEventListener("readystatechange", dataHandler);
+        function dataHandler(evt){
+            if(xhr.readyState === 4){
+                /*
+                document
+                .querySelector(".box")
+                .innerHTML = xhr.responseXML;
+                */
+            var data = xhr.responseXML;
+            var count = data.getElementsByTagName("hero").length;
+            console.log(count);
+            var elm = "";
+            for(var i = 0 ; i < count ; i++){
+                elm+="<li>"+data.getElementsByTagName("title")[i].innerHTML+"</li>"
+            };
+            document
+                .querySelector(".box")
+                .innerHTML = elm;
+            }else{
+                console.log("readyState now is :", xhr.readyState)
+            }
+        };
+        function clickHandler(evt){
+            xhr.send();
+        }
+        function init(){
+            document
+            .querySelector("button")
+            .addEventListener("click", clickHandler);
+        };
+        document.addEventListener("DOMContentLoaded", init);
+    </script>
+</head>
+<body>
+    <h1>AJAX Fun</h1>
+    <hr>
+    <div class="box"></div>
+    <button>Get Data</button>
+</body>
+</html>

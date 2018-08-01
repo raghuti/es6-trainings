@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        var hero = {
+            fname : "Clark",
+            lname : "Kent",
+            title : "Superman"
+        };
+/*
+        var temphero = hero;
+        console.log(temphero.title);// superman;
+        console.log(hero.title);// superman;
+        temphero.title = "Joker";
+        console.log("temphero",temphero.title);// joker;
+        console.log("hero",hero.title);// joker;
+*/
+/*
+        var temphero_title = hero.title,
+            temphero_fname = hero.fname,
+            temphero_lname = hero.lname;
+*/
+/*
+         var temphero = {
+             title : hero.title,
+             fname : hero.fname,
+             lname : hero.lname
+         };
+*/
+
+/*
+        console.log(temphero_title);// superman;
+        temphero_title = "joker";
+        console.log(temphero_title);// joker;
+        console.log(hero.title);// superman;
+*/
+ 
+ // let { title : htitle, fname : hfname, lname : hlname } = hero;
+ //console.log(htitle, hfname, hlname);// superman
+ let { title, fname, lname } = hero;
+ console.log(title, fname, lname);// superman;
+
+
+ let heroes = ["Batman", "Superman", "Ironman"];
+
+ let [firsthero, secondhero, thirdhero] = heroes;
+ console.log(firsthero);// Batman;
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
