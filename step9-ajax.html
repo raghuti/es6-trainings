@@ -7,8 +7,8 @@
     <title>Document</title>
     <style>
     .box{
-        width: 600px;
-        height: 200px;
+        width: 690px;
+        height: 400px;
         background-color: beige;
         border: 1px solid grey;
         margin: 50px auto 0px;
@@ -73,7 +73,21 @@
             console.log(count);
             var elm = "";
             for(var i = 0 ; i < count ; i++){
-                elm+="<li>"+data.getElementsByTagName("title")[i].innerHTML+"</li>"
+                var title = data.getElementsByTagName("title")[i].innerHTML;
+                var fname = data.getElementsByTagName("fname")[i].innerHTML;
+                var lname = data.getElementsByTagName("lname")[i].innerHTML;
+                var city = data.getElementsByTagName("city")[i].innerHTML;
+                var power = data.getElementsByTagName("power")[i].innerHTML;
+                var photo = data.getElementsByTagName("photo")[i].innerHTML;
+                // elm+="<li>"+data.getElementsByTagName("title")[i].innerHTML+"</li>"
+                elm+= `
+                <div class="hero"><h1>${title}</h1>
+                    <h2>${fname.toUpperCase()} ${lname}</h2>
+                    <img src="${photo}" alt="${title.toLowerCase()}">
+                    <hr>
+                    <input value="${power}" type="range" min="0" max="10">
+                    <h2>${city}</h2>
+                </div>`
             };
             document
                 .querySelector(".box")
@@ -99,14 +113,15 @@
     <div class="box"></div>
     <button>Get Data</button>
 
-    <div class="hero">
+    <!-- <div class="hero">
         <h1>Batman</h1>
         <h2>Bruce Wayne</h2>
         <img src="images/batman.jpg" alt="batman">
         <hr>
         <input value="7" type="range" min="0" max="10">
         <h2>Gotham</h2>
-    </div>
+    </div> -->
+    
 
 </body>
 </html>
