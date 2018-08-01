@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Classes</title>
+    <script>
+        /* 
+            ES5 Classes
+            function Hero(fn, ln){
+                this.firstname = fn;
+                this.lastname = ln;
+                var secret = "Hero's Secret Mission";
+                this.fullname = function(){
+                    return this.firstname+" "+this.lastname;
+                }
+            };
+            
+            var hero = new Hero("Bruce","Wayne");
+            console.log(hero.fullname());
+           */
+          class Hero{
+              constructor(fn, ln, cty){
+                this.firstname = fn;
+                this.lastname = ln;
+                var secret = "Secret";
+                this._city = cty;
+              }
+              fullname(){
+                  return this.firstname+" "+this.lastname
+              }
+              get city(){
+                return this._city;
+              } 
+              set city(arg){
+                  this._city = arg
+              }
+          };
+          
+          class RealHero extends Hero{
+                constructor(fn,ln,city, movies){
+                    super(fn,ln,city);
+                    this.movies = movies;
+                }
+                movieslist(){
+                    return this.movies;
+                }
+          };
+
+          var rh = new RealHero("Rajani","kanth","Solapur","Basha");
+
+          console.log(rh.fullname());
+          console.log(rh.movieslist());
+
+
+          var hero = new Hero("Peter","Parker","Gotham");
+          console.log(hero.fullname());
+          // console.log(hero.secret);
+          console.log(hero.city);
+          hero.city = "Bangalore";
+          console.log(hero.city);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

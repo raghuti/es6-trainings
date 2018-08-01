@@ -1,8 +1,13 @@
 var express = require("express");
 var app = express();
 
+app.use(express.static(__dirname));
+
+// app.get("/", function(req, res){
+//     res.sendFile(__dirname+"/step9-ajax.html");
+// });
 app.get("/", function(req, res){
-    res.sendFile(__dirname+"/js-step2-ajax-fun.html");
+    res.sendFile(__dirname+"/step11-modules.html");
 });
 app.get("/data", function(req, res){
     res.sendFile(__dirname+"/data.xml");

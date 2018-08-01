@@ -2,6 +2,7 @@
     <hero>
         <title>Batman</title>
         <fname>Bruce</fname>
+        <photo>images/batman.jpg</photo>
         <lname>Wayne</lname>
         <city>Gotham</city>
         <power>7</power>
@@ -9,6 +10,7 @@
     <hero>
         <title>Superman</title>
         <fname>Clark</fname>
+        <photo>images/superman.jpg</photo>
         <lname>Kent</lname>
         <city>Metropolis</city>
         <power>9</power>
@@ -17,6 +19,7 @@
         <title>Ironman</title>
         <fname>Tony</fname>
         <lname>Stark</lname>
+        <photo>images/ironman.jpg</photo>
         <city>New York</city>
         <power>7</power>
     </hero>
@@ -24,6 +27,7 @@
         <title>Spiderman</title>
         <fname>Peter</fname>
         <lname>Parker</lname>
+        <photo>images/spiderman.jpg</photo>
         <city>New York</city>
         <power>6</power>
     </hero>
